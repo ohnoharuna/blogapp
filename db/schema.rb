@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_11_14_113447) do
+ActiveRecord::Schema.define(version: 2024_11_15_021547) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2024_11_14_113447) do
     t.boolean "subscribed", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "nickname"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

@@ -7,6 +7,7 @@
 #  gender       :integer
 #  introduction :text
 #  mickname     :string
+#  nickname     :string
 #  subscribed   :boolean          default(FALSE)
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
