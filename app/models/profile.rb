@@ -6,6 +6,7 @@
 #  birthday     :date
 #  gender       :integer
 #  introduction :text
+#  mickname     :string
 #  nickname     :string
 #  subscribed   :boolean          default(FALSE)
 #  created_at   :datetime         not null
@@ -19,6 +20,7 @@
 class Profile < ApplicationRecord
   enum gender: { male: 0, female: 1, other: 2 }
   belongs_to :user
+  has_one_attached :avatar
 
   def age
     return '不明' unless birthday.present?
